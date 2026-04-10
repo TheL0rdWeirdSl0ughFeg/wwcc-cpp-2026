@@ -11,7 +11,7 @@ int main() {
     cout << "Enter your name: ";
     getline(cin, name);
 
-    cout << "What was the most popular optical storage medium before DVD?";
+    cout << "What was the most popular optical storage medium before DVD?: ";
     getline(cin, answer);
 
     cout << "CDs nuts haha gotteem";
