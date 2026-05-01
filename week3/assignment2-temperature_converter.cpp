@@ -1,13 +1,17 @@
 #include <iostream>
 #include <iomanip>
+#if defined(_WIN32) || defined(_WIN64)
 #include <windows.h>
+#endif
 
 using namespace std;
 
 void tempConvert(double temperature, char unit, double& centigrade, double& fahrenheit, double& kelvin);
 
 int main() {
+    #if defined(_WIN32) || defined(_WIN64)
     SetConsoleOutputCP(CP_UTF8);
+    #endif
 
     double temperature;
     double centigrade, fahrenheit, kelvin;

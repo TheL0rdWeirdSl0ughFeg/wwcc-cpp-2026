@@ -1,6 +1,8 @@
 #include <iostream>
 #include <iomanip>
+#if defined(_WIN32) || defined(_WIN64)
 #include <windows.h>
+#endif
 
 using namespace std;
 
@@ -12,6 +14,10 @@ int getConversionCount();
 static int conversionCount = 0;
 
 int main() {
+    #if defined(_WIN32) || defined(_WIN64)
+    SetConsoleOutputCP(CP_UTF8);
+    #endif
+    
     int select;
     double value, conValue;
     char cont;
