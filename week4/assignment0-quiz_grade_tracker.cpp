@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <cctype>
 #if defined(_WIN32) || defined(_WIN64)
 #include <windows.h>
@@ -94,6 +95,7 @@ int main(){
     cout << "Quiz 5: " << grades[4] << " (" << letterGrade[4] << ")" << endl;
 
     cout << "Statistics:" << endl;
+    cout << fixed << setprecision(1);
     cout << "Average score: " << average << endl;
     cout << "Highest score: " << high << " (Quiz " << quizHigh << ")" << endl;
     cout << "Lowest score: " << low << " (Quiz " << quizLow << ")" << endl;
