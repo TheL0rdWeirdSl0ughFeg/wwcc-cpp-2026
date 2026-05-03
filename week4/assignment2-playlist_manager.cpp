@@ -33,8 +33,6 @@ int main(){
     Song playlist[5];
     int total = 0;
     int longest = 0;
-    string searchName = "";
-    string artistName = "";
 
     cout << "PERSONAL PLAYLIST MANAGER" << endl;
     cout << "----------------------------" << endl;
@@ -50,13 +48,15 @@ int main(){
         getline(cin, playlist[i].genre);
         cout << "Duration (seconds): ";
         cin >> playlist[i].durationSeconds;
+        cin.ignore(1000, '\n');
         cout << endl;
+
     }
 
     cout << "YOUR PLAYLIST" << endl;
     cout << "-----------------" << endl;
 
-     for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 5; i++) {
         songInfo(playlist[i]);
         cout << endl;
 
@@ -75,6 +75,7 @@ int main(){
     cout << endl;
 
     string artistName;
+
     cout << "Enter an artist name to search: ";
     getline(cin, artistName);
 
