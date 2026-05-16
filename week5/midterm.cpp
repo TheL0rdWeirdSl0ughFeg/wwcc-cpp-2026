@@ -468,7 +468,7 @@ string toLower(string search) {
 }
 
 void addTransaction(Account& account, string type, double amount) {
-    if (account.transactionCount >= 100) {
+    if (account.transactionCount >= 100) {//magic number, define as const instead
         for (int i = 1; i < 100; i++) {
             account.history[i - 1] = account.history[i];
         }
